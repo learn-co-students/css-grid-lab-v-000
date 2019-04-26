@@ -9,7 +9,9 @@ body {
   width: 100vw;
   /* your properties here */
   display: grid;
-  grid-template: 1fr 1fr 1fr 1fr / 1fr 1fr 1fr;
+  /* grid-template: 1fr 1fr 1fr 1fr / 1fr 1fr 1fr; */
+  /* alternate way for grid template with names */
+  grid-template: [header-start] 1fr [header-end] repeat(auto, 1fr)/1fr 1fr 1fr;
   grid-gap: 5px
 }
 
