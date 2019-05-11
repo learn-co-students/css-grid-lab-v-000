@@ -1,18 +1,38 @@
 html,
 body {
-  margin: 0;
-  padding: 0;
+  	margin: 0;
+  	padding: 0;
 }
 
 .grid-container {
-  height: 100vh;
-  width: 100vw;
-  /* your properties here */
+  	height: 100vh;
+  	width: 100vw;
+  	/* your properties here */
+  	display: grid;
+	/* grid-template: 1fr 1fr 1fr 1fr / 1fr 1fr 1fr; */
+	/* -or- */
+	/* grid-template: repeat(4, 1fr) / repeat(3, 1fr); */
+	/* -or- */
+	grid-template: [header-start] 1fr [header-end] 1fr 1fr 1fr / 1fr 1fr 1fr;
+	grid-gap: 5px;
 }
 
 .grid-item {
-  background-color: grey;
-  border: 1px solid black;
+  	background-color: grey;
+  	border: 1px solid black;
 }
 
 /* add the .bigItem class */
+.bigItem {
+	/*  grid-row-start: 2;
+		grid-row-end: 4;
+		grid-column-start: 2;
+		grid-column-end: 4; */
+	/* -or- */
+	/* grid-area: <grid-row-start> / <grid-column-start> / <grid-row-end> / <grid-column-end> */
+	grid-area: 2 / 2 / 4 / 4;
+	height: 50%;
+	width: 50%;
+	justify-self: center;
+	align-self: center;
+}
