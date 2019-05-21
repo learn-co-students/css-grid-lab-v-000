@@ -7,6 +7,9 @@ body {
 .grid-container {
   height: 100vh;
   width: 100vw;
+  display: grid;
+  grid-template: [header-start] 1fr [header-end] 1fr 1fr 1fr  / repeat(3, 1fr);
+  grid-gap: 5px;
   /* your properties here */
 }
 
@@ -16,3 +19,15 @@ body {
 }
 
 /* add the .bigItem class */
+.bigItem {
+  height: 100%;
+  width: 100%;
+  justify-self: center;
+  grid-area: 2 / 2 / 4 / 4;
+
+}
+
+img {
+  object-fit: cover;
+  width: 100%;
+}
