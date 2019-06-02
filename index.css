@@ -5,6 +5,10 @@ body {
 }
 
 .grid-container {
+  display: grid;
+  grid-gap: 5px;
+  grid-template: auto / 1fr 1fr 1fr;
+
   height: 100vh;
   width: 100vw;
   /* your properties here */
@@ -16,3 +20,21 @@ body {
 }
 
 /* add the .bigItem class */
+   .bigItem {
+     /*grid-column-start:2;
+     grid-column-end:4;*/
+     /*Shorthand version*/
+     /*grid-row: 2/4;*/
+
+     /*grid-row-start:2;
+     grid-row-end: 4;*/
+     /*Shorthand version*/
+      /*grid-column: 2/4;*/
+
+ /*short-short hand version*/
+      grid-area: 2/2/4/4;
+
+      height: 50%;
+      width: 50%;
+      justify-content: center;
+   }
