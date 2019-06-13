@@ -5,9 +5,12 @@ body {
 }
 
 .grid-container {
-  height: 100vh;
-  width: 100vw;
+  height: 90vh;
+  width: 90vw;
   /* your properties here */
+  display: grid;
+  grid-template: [header-start] 1fr [header-end] 1fr 1fr 1fr / 1fr 1fr 1fr;
+  grid-gap: 50px;
 }
 
 .grid-item {
@@ -16,3 +19,9 @@ body {
 }
 
 /* add the .bigItem class */
+.bigItem {
+  grid-area: header-start / 1 / header-end / 4;
+  height: 50%;
+  width: 50%;
+  justify-self: center;
+}
