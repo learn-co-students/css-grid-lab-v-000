@@ -7,7 +7,9 @@ body {
 .grid-container {
   height: 100vh;
   width: 100vw;
-  /* your properties here */
+  /* add grid and properties using fraction unit, 'fr' */
+  display: grid;
+  grid-template: 1fr 1fr 1fr 1fr / 1fr 1fr 1fr;
 }
 
 .grid-item {
