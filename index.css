@@ -7,7 +7,14 @@ body {
 .grid-container {
   height: 100vh;
   width: 100vw;
+
+  
   /* add grid and properties using fraction unit, 'fr' */
+
+  /* fr - Represents a fraction unit. Using fr will set a cell's
+  width or height based on the total number of fractions used. 
+  A setting of 1fr 2fr 1fr 1fr will result in each fraction being 
+  20% of grid container, with the second cell being twice as large */
   display: grid;
   grid-template: 1fr 1fr 1fr 1fr / 1fr 1fr 1fr;
 }
