@@ -7,8 +7,12 @@ body {
 .grid-container {
   height: 100vh;
   width: 100vw;
+  display: grid;
+  grid-template: 1fr 1fr 1fr / 1fr 1fr 1fr 1fr;
+  grid-auto-rows: 50px;
+  grid-gap: 5px;
 
-  
+
   /* add grid and properties using fraction unit, 'fr' */
 
   /* fr - Represents a fraction unit. Using fr will set a cell's
@@ -25,3 +29,6 @@ body {
 }
 
 /* add the .bigItem class */
+    .bigItem {
+      grid-area: 2 / 2 / 4 / 4;
+    }
