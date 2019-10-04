@@ -45,7 +45,7 @@ To give this grid a second dimension, we just need to add one property. Just
 below `display: grid` in the `grid-container` class, add in:
 
 ```
-grid-template: 1fr 1fr 1fr 1fr / 1fr 1fr 1fr;
+grid-template: 1fr 1fr 1fr / 1fr 1fr 1fr 1fr;
 ```
 
 Save and take a look at our page now. Instead of a just stack of twelve divs,
