@@ -1,3 +1,4 @@
+
 require "pry"
 
 parser = CssParser::Parser.new
@@ -49,5 +50,5 @@ RSpec.describe 'styling' do
     end
 
   end
-  
+
 end
