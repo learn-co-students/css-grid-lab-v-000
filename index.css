@@ -7,12 +7,52 @@ body {
 .grid-container {
   height: 100vh;
   width: 100vw;
-  /* your properties here */
+  display: grid;
+  /* grid-template: auto / 50px auto 25%; */
+  /* grid-template: repeat(4, 1fr) / repeat(3, 1fr); */
+  grid-template-rows: [header-start] 1fr [header-end] 1fr 1fr 1fr;
+  /* grid-template-rows: repeat(2, 1fr);
+  grid-template-columns: repeat(3, 1fr);
+  grid-auto-rows: 50px; */
+
+  grid-template: repeat(4, 1fr) / repeat(3, 1fr);
+  /* grid-gap: 5px; */
+  /* gap: 5%; This works too and is preferred; grid-gap is becoming obsolete. */
+  grid-gap: 2.5%;
+  /* grid-auto-rows: 50px; */
+  justify-items: center;
+  align-items: center;
 }
 
 .grid-item {
   background-color: grey;
   border: 1px solid black;
+  width: 25%;
+  height: 25%;
 }
 
 /* add the .bigItem class */
+.bigItem {
+  /* grid-column-start: 1;
+  grid-column-end: 3;
+  grid-row-start: 1;
+  grid-row-end: 3; */
+
+  /* grid-row-start: 2; */
+  /* grid-row-end: 7; */
+  /* grid-row-end: 4; */
+  /* grid-column-start: 2; */
+  /* grid-column-end: 4; */
+
+  /* grid-row: 2 / 4; */
+  /* grid-column: 2 / 4; */
+
+  grid-area: 2 / 2 / 4 / 4;
+  /* grid-area: header-start / 1 / header-end / 4; */
+  height: 50%;
+  width: 50%;
+  justify-self: center;
+  align-self: center;
+  /* Note: baseline and stretch only work for justify-self and align-self,
+     if there's no width or height specified, respectively. */
+}
